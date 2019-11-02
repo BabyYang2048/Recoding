@@ -1,0 +1,15 @@
+> 参考链接： https://blog.csdn.net/FutureLilian/article/details/79814536
+
+今天利用webstrom创建vue项目时想导入element-ui出现了一些小问题，特此记录
+
+首先我进入了element官网，根据教程，粘贴了引入包的相关三行代码
+> import ElementUI from 'element-ui'
+> import 'element-ui/lib/theme-default/index.css'
+> Vue.use(ElementUI)
+
+运行项目报错，此时import ElementUI from 'element-ui'的element-ui鼠标悬浮时有提示
+根据提示，选择more action，点击add to package.json 那一个，等待..
+执行完成后 发现项目还是报同样的错，发现是 import 'element-ui/lib/theme-default/index.css'的路径问题
+进入该目录下查找发现并没有theme-default文件夹，反倒有一个theme-chalk文件夹，故将路径修改
+
+至此成功
