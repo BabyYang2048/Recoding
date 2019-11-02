@@ -1,0 +1,30 @@
+> 参考链接 https://blog.csdn.net/weixin_40760196/article/details/79952652
+
+学习vue了一阵子，一直是建立在已搭建好的项目中修改代码，还没有自己从头创建项目过，今天在新建项目时就遇到了问题，以此记录
+
+创建新项目之前需要保证项目中已经安装了：node.js, npm, webpack, vue.js.
+- node，npm的安装：
+下载安node装包，点击安装后，输入 node -v，npm -v测试
+- 在安装webpack和vue-cli之前，安装淘宝镜像:
+输入 npm install -g cnpm --registry=https://registry.npm.taobao.org, 安装之后输入cnpm -v 验证
+- webpack的安装：
+cnpm install webpack -g  安装之后输入webpack -v命令验证
+- vue-cli的安装：
+cnpm install --global vue-cli  安装之后输入vue -V命令验证(V大写注意哦)
+
+打开webstorm，点击新建项目，左侧栏选择vue.js，右侧栏以此选择项目路径，node路径，vue.jslujing ,webpack(后三个一般会自动生成)
+然后点击next，这时候会让你输入project name，请注意，这时项目名要求不能有大写字母，之后无脑下一步到完成。
+
+项目创建成功后，选择项目中的package.json,右键选择show npm scripts,双击dev测试，
+项目会出现默认的链接(一般是localhost:8080/#/)，点击链接会出现一个有vuelogo的页面
+
+至此项目创建成功。
+
+------------
+
+项目创建成功后：
+src文件夹是核心源代码的所在目录
+assets文件夹用到的图片都可以放在这里
+components用的"视图"和"组件"所在的文件夹(核心)
+router是路由文件夹，定义了各个页面对应的url
+main.js 没有实际的业务逻辑，但是为了支持整个Vue框架，很有必要存在
